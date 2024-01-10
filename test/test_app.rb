@@ -18,7 +18,7 @@ class TestApp < Minitest::Test
         post '/send_weather_tweet_without_location' do
           content_type :json
 
-          halt 500, { message: 'Something very bad happen!' }
+          halt 500, { message: 'Something very bad happen!' }.to_json
         end
       end
     end

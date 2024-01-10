@@ -18,14 +18,14 @@ class WeatherToX < Sinatra::Base
 
   post '/send_weather_tweet' do
     content_type :to_json
-    
+
     wheater_info = WeatherRequest.new.get(api_key: ENV['WEATHER_API_KEY'],
                                           query: ERB::Util.url_encode(params[:query]))
 
     if SendTweet.call(payload: wheater_info)
       { message: 'Tweet posted!' }.to_json
     else
-      halt 500
+      halt 500, { message: 'Something very bad happen!' }.to_json
     end
   end
 end
