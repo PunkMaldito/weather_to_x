@@ -35,3 +35,14 @@ or
 ```shell
 curl -d "query=-20.4435,-54.6478" -X POST "http://localhost:9292/send_weather_tweet"
 ```
+
+## Docker
+Build with:
+```shell
+docker build --tag wtx .
+```
+
+Run with:
+```shell
+docker run -p 9292:9292 wtx
+```
