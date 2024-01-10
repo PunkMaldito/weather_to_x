@@ -15,10 +15,11 @@ bundle install
 
 ## Run
 
+That will start your application at port 9292.
+
 ```shell
 bundle exec rackup config.ru
 ```
-That will start your application at port 9292.
 
 
 ## Endpoint
