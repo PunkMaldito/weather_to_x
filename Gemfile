@@ -7,7 +7,7 @@ gem 'sinatra-contrib'
 gem 'thin'
 gem 'rake'
 gem 'dotenv'
-gem 'weather_request', path: '/home/punkmaldito/apps/weather_request/'
+gem 'weather_request', git: 'https://github.com/PunkMaldito/weather_request'
 gem 'x'
 
 group :test do

@@ -1,5 +1,6 @@
-PATH
-  remote: /home/punkmaldito/apps/weather_request
+GIT
+  remote: https://github.com/PunkMaldito/weather_request
+  revision: 1f2eaf47679d9b9aa36f091ed1d3d17aca4ffcae
   specs:
     weather_request (0.1.0)
       json (~> 2.7, >= 2.7.1)
