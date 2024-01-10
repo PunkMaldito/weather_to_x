@@ -16,12 +16,9 @@ class WeatherToX < Sinatra::Base
     require service
   end
 
-  get '/' do
-    puts ENV['WEATHER_API_KEY']
-    { message: 'API running!' }.to_json
-  end
-
   post '/send_weather_tweet' do
+    content_type :to_json
+    
     wheater_info = WeatherRequest.new.get(api_key: ENV['WEATHER_API_KEY'],
                                           query: ERB::Util.url_encode(params[:query]))
 
