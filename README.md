@@ -24,7 +24,7 @@ bundle exec rackup config.ru
 
 ## Endpoint
 
-Exposes a POST endpoint that receives a city name or latitude and longitude as a query parameter.
+Exposes a POST endpoint that receives a city name or geolocation as a query parameter.
 
 Example:
 
