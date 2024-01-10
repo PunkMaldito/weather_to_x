@@ -30,3 +30,7 @@ Example:
 ```shell
 curl -d "query=São Paulo" -X POST "http://localhost:9292/send_weather_tweet"
 ```
+or
+```shell
+curl -d "query=-20.4435,-54.6478" -X POST "http://localhost:9292/send_weather_tweet"
+```
