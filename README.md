@@ -1,5 +1,5 @@
 # Weather To X
-A simple Sinatra aplication that retrieves weather information and post on X.
+A simple Sinatra application that retrieves weather information and post on X.
 
 
 ## System Architecture
