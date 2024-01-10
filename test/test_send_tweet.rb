@@ -10,6 +10,9 @@ class TestSendTweet < Minitest::Test
   end
 
   def test_success_call
+    stub_request(:get, 'http://api.weatherapi.com/v1/forecast.json?days=6&aqi=no&alerts=no&lang=pt&key=1&q=Campo Grande')
+      .to_return(status: 200, body: weather_info, headers: { 'Content-Type' => 'application/json' })
+
     stub_request(:post, "https://api.twitter.com/2/tweets")
       .with(
         body: "{\"text\":\"33,0°C e parcialmente nublado em Campo Grande em 09/01. "\
