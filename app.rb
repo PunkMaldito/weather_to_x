@@ -17,7 +17,7 @@ class WeatherToX < Sinatra::Base
   end
 
   post '/send_weather_tweet' do
-    content_type :to_json
+    content_type :json
 
     wheater_info = WeatherRequest.new.get(api_key: ENV['WEATHER_API_KEY'],
                                           query: ERB::Util.url_encode(params[:query]))

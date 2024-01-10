@@ -16,12 +16,12 @@ class SendTweet
   end
 
   def call
-    return false unless @payload
+    return false if @payload.nil?
 
     message = create_message(@payload)
-    post = @x_client.post('tweets', { text: message }.to_json)
+    @x_client.post('tweets', { text: message }.to_json)
 
-    return true if post
+    true
   end
 
   protected

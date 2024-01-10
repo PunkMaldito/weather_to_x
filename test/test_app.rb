@@ -24,8 +24,7 @@ class TestApp < Minitest::Test
     end
 
     def test_successul_post
-      post('/send_weather_tweet_with_location',
-                      query: 'Campo Grande')
+      post('/send_weather_tweet_with_location', query: 'Campo Grande')
 
       assert(last_response.ok?)
       assert_equal(last_response.status, 200)
@@ -33,8 +32,7 @@ class TestApp < Minitest::Test
     end
 
     def test_failed_post
-      post('/send_weather_tweet_without_location',
-                      query: '')
+      post('/send_weather_tweet_without_location', query: '')
 
       assert(!last_response.ok?)
       assert_equal(last_response.status, 500)
